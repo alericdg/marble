@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marble</title>
+    <link rel="icon" type="image"  href="./assets/favicon.svg">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    
+    <script src="./js/products.js"></script>
+    <script src="./js/prod.js"></script>
+    <script src="./js/ShoppingCart.js"></script>
+    <script defer src="./js/app.js"></script>
+    <script src="./js/animations.js"></script>
+</head>
+<body>
+    <section class="top-nav">
+      <div>
+        <img class="logo" src="./assets/logo.svg" alt="logo">
+      </div>
+      <input id="menu-toggle" type="checkbox"/>
+      <label class='menu-button-container' for="menu-toggle"></label>
+        <ul class="menu">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
+    
+        <div class="search-container">
+            <form class="srch-form" action="#" name="step1">
+                <input type="text" name="search" id="search-bar" placeholder="what are you looking for?">
+            </form>
+            <button id="search-button" class="btn-srch" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+
+        <ul class="menu">
+            <li><a href="#" id="user"><img class="icon" src="./assets/user.svg" alt="user"></a></li>
+            <li><a href="#" id="cart"><img class="icon" src="./assets/cart.svg" alt="cart"><span class="badge">3</span></a></li>
+        </ul>
+
+    </section>
+        <!-- CARRITO -->
+        <div id="icon-container">
+            <div id="carrito" class="shopping-cart">
+                <div class="arrow-up"></div>
+                <img class="icon" src="./assets/cart.svg"><span class="badge">3</span>
+                <div class="shopping-cart-total">
+                  <span class="sub">Subtotal: </span>
+                  <span class="price">$0</span>
+                </div>
+          
+                <ul id="order" class="shopping-cart-items">
+                    <li>The cart is empty</li>
+                </ul>
+          
+                <a href="#" class="button-cart">Checkout</a>
+                <a href="#" class="button-view">View cart</a>
+            </div> <!--end shopping-cart-bg -->
+        </div> <!--end icon-container -->
+
+        <div class="user-login" id="user-log">
+            <div class="arrow-up-left"></div>
+            <img class="icon" src="./assets/user.svg"><span class="badge">3</span>
+            <div class="register">
+                <span class="register-btn">Create account</span>
+              </div>
+            <div id="user">
+                <div class="title">Nice to see you again!</div>
+                <form action="#" name="user">
+                    <p><label>Username or email <span class="required">*</span>
+                    </label>
+                    <input name="username" type="text" required="" placeholder="Username">
+                    </p>
+                    <p> <label>Password <span class="required">*</span></label> <input name="password" type="password" required="" placeholder="Password"></p>
+                </form>
+            </div>
+            <a href="#" class="button-cart">Login</a>
+            <div class="login-form-bottom"> <a href="#" class="mt" title="Lost your password?">Lost your password?</a></div>
+
+        </div> <!--end shopping-cart-bg -->
+
+    
+
+    <section class="search-results" style="display: none;">
+        <div class="grid" id="search-resume">
+            <div><p><strong><span id="search-result-length"></span></strong> Search results <strong><span id="search-key"></span></strong></p></div>
+        </div>
+        <div class="grid">
+            <div id="products-container"></div>
+            <div id="cart-container"></div>  
+        </div>
+    </section>   
+
+    <section class="banner-container parallax">
+        <div class="banner-text">astros<h4>desde  <span class="bold-text">$3.450</span></h4><button class="btn-shop">Shop now</button>
+        </div>
+        <div class="banner-img">
+            <img class="chair" src="./assets/chair_1.png" alt="astros chair">
+        </div>
+    </section>
+
+    <div class="grid-2">
+        <div>
+            <img class="card-image" src="./assets/chair_2.png" alt="Oasis armchair">
+            <div>
+                <a class="card-title" href="#" title="Chairs"><span>Chairs</span></a>
+            </div>
+        </div>
+        <div>
+            <img class="card-image" src="./assets/sofa_1.png" alt="Liverpool lamp">
+            <div class="card-title-big">
+                <a class="card-title" href="#" title="Sofa"><span>Sofas</span></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="highlight">
+        <h2>
+            Trending items
+        </h2>
+        <p>Find a bright ideal to suit your taste with our great selection of suspension, wall, floor and table lights.
+        </p>
+    </section>
+
+    <div id="productos" class="grid-4">
+    </div>
+
+    <div class="modal-container" style="display: none;">
+        <div class="modal">
+            <a href="#close" class="close">&times;</a>
+        </div>
+    </div>
+
+    <footer>
+    <p>Copyright © 2020 . All rights reserved.</p>
+    <img src="./assets/paypal.png" alt="Medios de pago">
+    </footer>
+    
+</body>
+</html>

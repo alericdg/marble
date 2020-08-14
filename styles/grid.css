@@ -1,0 +1,32 @@
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+    grid-template-rows: minmax(auto, auto);
+}
+
+.grid-2 div {
+    background: #f2f2f2;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3em;
+    grid-template-rows: minmax(380, auto);
+}
+
+.grid-4 > div {
+    background: #f2f2f2;
+    display: grid;
+}
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1em;
+    padding: 20px 100px 20px 100px;
+    background-color: #ebebeb;
+    position: static;
+}
